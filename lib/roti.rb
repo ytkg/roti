@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require_relative "roti/version"
+require_relative 'roti/version'
 
 module Roti
   class Error < StandardError; end
 
   class << self
-    CHARACTOR_LIST = ("!".."~").to_a
+    CHARACTOR_LIST = ('!'..'~').to_a
     CHARACTOR_LIST_SIZE = CHARACTOR_LIST.size
 
     def encode(string)
