@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'roti/version'
+require_relative 'roti/cli'
 
 module Roti
   class Error < StandardError; end
