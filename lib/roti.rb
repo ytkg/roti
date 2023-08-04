@@ -11,7 +11,7 @@ module Roti
     CHARACTOR_LIST_SIZE = CHARACTOR_LIST.size
 
     def encode(string)
-      string.chars.map.with_index(1) { |charactor, index| enecode_charactor(charactor, index) }.join
+      string.chars.map.with_index(1) { |charactor, index| encode_charactor(charactor, index) }.join
     end
 
     def decode(string)
@@ -20,7 +20,7 @@ module Roti
 
     private
 
-    def enecode_charactor(charactor, index)
+    def encode_charactor(charactor, index)
       return charactor unless CHARACTOR_LIST.include?(charactor)
 
       CHARACTOR_LIST[(CHARACTOR_LIST.index(charactor) + index) % CHARACTOR_LIST_SIZE]
